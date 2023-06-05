@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">  <!-- libreria css -->
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">  <!-- libreria css -->
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>  <!-- Uso de iconos -->
+
+</head>
+<body>
+
+
+    <!-- HEADER -->
+
+
+    <header class="flex w-full fixed  top-0 z-1"> <!--Flexible, nav fija, arriba  -->
+    <nav class="flex justify-content-between w-full navbar">
+        <span class="logo cursor-pointer" onclick="scrollToSection('perfil')">
+            <img src="./imagenes/log.png" alt="Logo portafolio" width="145" height="120">
+        </span>
+        <input type="checkbox" class="checkbox xl:hidden"> <!-- xl:hidden hace que el checkbox se oculte en dispostivos grandes -->
+            <div class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        <div class="header__info flex align-items-center gap-3"><!-- Menu, gap: separacion entre elementos -->
+            <ul class="flex flex-column xl:flex-row list-none"> <!-- Se crea una fila y se quitan iconos  -->
+                <li onclick="scrollToSection('AcercaDe')">Sobre mi</li>
+                <li onclick="scrollToSection('Habilidades')">Habilidades</li>
+                <li onclick="scrollToSection('portafolio')">Portafolio</li>
+                <li onclick="scrollToSection('redes')">Contactame</li>
+            </ul>
+        
+            <div class="hireMe__button pt-.5">
+                <a href="mailTo:cess.fernandez2012@gmail.com"  
+                class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Contratame</a>  <!-- Abre directamente el correo  -->
+            </div>
+        </div>
+    </nav>  
+</header>
+
+
+<!-- Nueva seccion  (Perfil)  -->
+
+
+<div class="container">  <!-- ocupa solo un porcentaje de la pantalla   -->
+    <section id="perfil"
+    class="perfil__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4"> <!-- contenido al centro -->
+    <div class="left__content col-12 xl:col-6">   <!-- seccion izquiera -->
+        <div class="message__bubble triangle mb-4 md:mb-2"> 
+            <div class="message__text p-2 sm:p-3 text-center"> 
+                <p>Bienvenidos, Yo soy</p>
+            </div>
+        </div>
+        <h1 class="text-3xl sm:text-5xl md:text-7xl">Uriel Fernandez</h1>
+        <p class="text-gray-500">
+            Desarrollador Frontend, Inversionista independiente.
+        </p>
+            <div class="perfil__buttons flex align-items-center gap-2 mt-6">  <!-- se crea botón -->
+                <a href="./imagenes/01CV.CesarUrielFernandezSerna.pdf" 
+                    class="cursor-pointer border-round-lg no-underline" download>Descargar CV</a>
+            <button onclick="scrollToSection('services')" class="cursor-pointer border-round-lg">Mi trabajo</button>
+            </div>
+        </div>
+    <div class="right__content col-9 sm:col-6 xl:col-5">  <!-- seccion derecha -->
+        <img src="./imagenes/perfil.png" alt="Foto perfil" width="100" height="100">
+    </div>
+    </section> 
+
+
+<!-- Nueva seccion  (acerca de)  -->
+
+
+    <section id="AcercaDe"  class="Acerca__De w-full min-h-screen flex align-items-center"> <!-- w-full: ancho de la pantalla, min-h-screen: altura, al centro -->
+        <div class="AcercaDe__content min-h-full flex flex-column md:flex-row pt-2 md:pt-0"> <!-- altura 100%, columna, md(fila) responsive-->
+            <div class="AcercaDe__info col-12 md:col-6 md:pr-6 pt-0"> <!-- columna de 12, responvive 6    -->
+            <h1 class="text-3xl md:text-5xl">Sobre mí</h1> <!-- tamaño de texto, responsive   -->
+            <p class="text-gray-500">
+                ¡Hola! Soy Cesar Uriel Fernández Serna, estudiante de Ingeniería en Sistemas Computacionales. Me apasiona el desarrollo web, el marketing digital y
+                 el uso de herramientas tecnológicas. Con sólidos conocimientos en CSS, HTML, JS, Python y experiencia en proyectos de software, puedo ayudarte a
+                  alcanzar tus objetivos. Estoy siempre en busca de nuevas oportunidades para aplicar mis habilidades y conocimientos, me mantengo actualizado en 
+                  inteligencia artificial y diseño. Trabajo con pasión y compromiso, estoy listo para enfrentar desafíos. ¡Contáctame y juntos lograremos resultados 
+                  excepcionales!</p>
+                <div class="conocimiento flex flex-column gap-3 mt-5">  
+                    <p>HTML 60%</p>
+                    <div class="progreso progreso__HTML">
+                        <span></span>
+                    </div>
+                    <p>CSS 50%</p>
+                    <div class="progreso progreso__CSS">
+                        <span></span>
+                    </div>
+                    <p>Java script 45%</p>
+                    <div class="progreso progreso__JS">
+                        <span></span>
+                    </div>
+                    <p>Python 45%</p>
+                    <div class="progreso progreso__Python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="hireMe__button pt-4">
+                    <a href="mailTo:cess.fernandez2012@gmail.com" 
+                        class="cursor-pointer no-underline border-round-lg">Contratame</a> <!-- sin subrayado, sin bordes   -->
+                </div>
+            </div>
+            <div class="imagen col p-0 mt-6 md:mt-0"> <!-- col:tamaño de columnas(restante espacio), md(responsive)  -->
+                <img src="./imagenes/contratame.png" alt="Foto AI" width="450" height="450">
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- Nueva seccion  (free lancer) -->
+
+
+<section class="freelancer mb-4 mt-4 min-w-ful flex flex-column justify-content-center align-items-center">
+    <p class="text-sm">Tines un proyecto en mente?</p>
+    <h1 class="text-center"> Estoy Disponible como freelancer!</h1>
+    <div class="hireMe__button pt-4">
+        <a href="mailTo:cess.fernandez2012@gmail.com" class="cursor-pointer no-underline border-round-lg">Escribeme</a> 
+    </div>
+</section>
+
+
+<!-- Nueva seccion  habilidades -->
+
+
+<div class="container">
+    <section id="Habilidades" class="Habilidades min-h-full w-full pb-7"> <!-- dimenciones -->
+        <div class="habilidades__title flex flex-column gap-5 text-center">
+            <h1 class="text-3xl md:text-5xl">Mis habilidades</h1><!-- tamaño de letras -->
+            <p class="text-gray-400 text-sm md:text-base" >Con una dedicación inquebrantable y una atención meticulosa a los
+                detalles, mi objetivo es superar tus expectativas en cada proyecto. Mi pasión por la programación y la
+                tecnología me impulsa a explorar nuevas fronteras y encontrar soluciones innovadoras que impulsen tu éxito.
+            </p>
+        </div>
+        <div class="habilidades__card w-full grid grid-nogutter mt-7 gap-5">
+            <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2">
+                <div class="habilidades__logo flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="habilidades__name">
+                    <p>HTML5</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
+                <div class="habilidades__logo flex align-items-center justify-content-center ">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="habilidades__name">
+                    <p>CSS</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
+                <div class="habilidades__logo flex align-items-center justify-content-center ">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <div class="habilidades__name">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
+                <div class="habilidades__logo flex align-items-center justify-content-center ">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <div class="habilidades__name">
+                    <p>Frontend</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
+                <div class="habilidades__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-cogs"></i>
+                </div>
+                <div class="habilidades__name">
+                    <p>Backend</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
+                <div class="habilidades__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="habilidades__name">
+                    <p>Desarrollo web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Portafolio -->
+
+    <section id="portafolio" class="portafolio min-h-full w-full pb-8 pt-8">
+        <div class="portafolio_titulo flex flex-column gap-3 text-center">
+            <h1>Mis Servicios</h1>
+            <p class=" text-sm md:text-base"> <!-- estilo del texto  -->
+                Entre mis sevicios puedo desrtacar que puedo apoyarte en:
+            </p>
+        </div>
+        <div class="portafolio_galeria">
+            <div class="galeria_secciones mb-5 mt-5"> <!-- separar por secciones -->
+                <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                    <li class="filter-item active" data-filter="todos">Todos</li>
+                    <li class="filter-item " data-filter="programacion">Programación</li>
+                    <li class="filter-item " data-filter="desarrollo_Web">Desarrollo Web</li>
+                    <li class="filter-item " data-filter="finanzas">Finanzas</li>
+                    <li class="filter-item " data-filter="tareas_ai">Tareas con AI</li>
+                </ul>
+            </div>
+            <div class="galeria_img flex justify-content-center align-items-center flex-wrap gap-3">
+                <div class="cartas programacion">
+                <img src="./imagenes/programacion.png">
+                <div class="overlay"></div> <!-- superponer contenido en la parte superior de otro elemento -->
+                    <div class="cartas_info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>Programación</h2>
+                        <p>¿Tienes una idea genial pero necesitas ayuda para llevarla a cabo? Permíteme ser tu socio en el mundo de la programación. Con mi experiencia y
+                             habilidades en desarrollo de software, estoy listo para transformar tus ideas en realidades digitales. </p>
+                    </div>
+                </div>
+                <div class="cartas desarrollo_Web">
+                    <img src="./imagenes/div.png">
+                    <div class="overlay"></div> <!-- superponer contenido en la parte superior de otro elemento -->
+                        <div class="cartas_info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Desarrollo Web</h2>
+                            <p>Permíteme ayudarte a desarrollar una página web que
+                                 destaque y genere un impacto duradero. Con mi experiencia en diseño web y desarrollo personalizado, crearé una plataforma digital que refleje tu marca, 
+                                 atraiga a tu audiencia y te ayude a alcanzar tus objetivos.</p>
+                        </div>
+                </div>
+                <div class="cartas desarrollo_Web">
+                    <img src="./imagenes/web.png">
+                    <div class="overlay"></div> <!-- superponer contenido en la parte superior de otro elemento -->
+                        <div class="cartas_info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Perfil profecional</h2>
+                            <p>Tu presencia en línea es tu carta de presentación en el mundo digital. Permíteme ser tu aliado en el desarrollo de tu página web para tu negocio o perfil profesional.</p>
+                        </div>
+                </div>
+                <div class="cartas finanzas">
+                    <img src="./imagenes/finanzas.png">
+                    <div class="overlay"></div> <!-- superponer contenido en la parte superior de otro elemento -->
+                        <div class="cartas_info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Finanzas</h2>
+                            <p>¿Quieres aprovechar las oportunidades que ofrece el mercado de acciones y lograr resultados excepcionales en tus inversiones? Déjame ayudarte a comprender y 
+                                comenzar tu vida en el fascinante mundo de la compra de acciones en bolsa</p>
+                        </div>
+                </div>
+                <div class="cartas finanzas">
+                    <img src="./imagenes/liv.png">
+                    <div class="overlay"></div> <!-- superponer contenido en la parte superior de otro elemento -->
+                        <div class="cartas_info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Libertad Financiera</h2>
+                            <p>¿Sueñas con alcanzar la libertad financiera y vivir la vida que siempre has deseado? Permíteme ser tu guía en este emocionante viaje hacia la independencia financiera. 
+                                Trabajaremos juntos para crear una estrategia personalizada que te ayude a maximizar tus ingresos, optimizar tus gastos y aprovechar las oportunidades de inversión. </p>
+                        </div>
+                </div>
+                <div class="cartas tareas_ai">
+                    <img src="./imagenes/ai.png">
+                    <div class="overlay"></div> <!-- superponer contenido en la parte superior de otro elemento -->
+                        <div class="cartas_info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Uso de Herramientas de AI</h2>
+                            <p>¿Te gustaría simplificar y optimizar tus tareas diarias con la ayuda de la inteligencia artificial? Permíteme mostrarte cómo puedes utilizar las últimas tecnologías para 
+                                facilitar tus procesos y aumentar tu productividad. </p>
+                        </div>
+                </div>  
+            </div>
+        </div>
+
+    </section>
+
+<!-- Contacto -->
+
+
+    <footer id="redes" class="min-h-full w-full  flex  grid col-12 justify-content-center pb-8 pt-8 lg:text-center">  <!-- pb, pb : espacios arriba y abajo  -->
+    <div class="medios col-12 md:col-4 flex flex-column justify-content-between">
+        <h3>Redes Sociales</h3>
+        <p>Auténtico e inivador</p>
+        <p>Experiencias digitales impactantes para tu negocio</p>
+        <div class="medios_Icons mt-2 flex lg:justify-content-center gap-3" > <!-- mt: espacio entre elementos de la parte de arriba, gap espacio entre elementos de lado -->
+            <a href="https://www.linkedin.com/in/cesar-fernandez-960774272/" target="_blank"> <!-- abrir en una nueva pestaña -->
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/CessFernandez1" target="_blank"><!-- abrir en una nueva pestaña -->
+               <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+    <div class="contacto col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+        <h3>Contacto</h3>
+        <div class="telefono flex align-items-center gap-2">
+            <i class="fa-solid fa-phone"></i>
+            <p>7296865701</p>
+        </div>
+        <div class="email flex align-items-center gap-2">
+            <i class="fa-solid fa-envelope"></i>
+            <p>cess.fernandez2012@gmail.com</p>
+        </div>
+        <a href="mailTo:cess.fernandez2012@gmail.com"
+        class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+            <span >
+                <i class="fa-solid fa-message" ></i>
+            </span> Escribeme
+        </a>
+    </div>
+    <div class="servicios col-12 sm:col-6 sm:p-4 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+        <h3>Mis servicios</h3>
+        <p>Desarrollo web</p>
+        <p>Marketing digital</p>
+        <p>Finanzas</p>
+    </div>
+    </footer>
+</div>    
+</body>
+
+<script>
+
+    const filterContainer = document.querySelector(".galeria_secciones");
+    const galleryItems = document.querySelectorAll(".cartas");
+
+    filterContainer.addEventListener("click", (event) => { /* --------   cada que de click regresa un evento -------- */
+        if (event.target.classList.contains("filter-item")) {  
+            filterContainer.querySelector(".active").classList.remove("active"); /* --------  quita el subrayado -------- */
+            event.target.classList.add("active") /* --------   coloca el nuevo subrayado -------- */
+            const filterValue = event.target.getAttribute("data-filter")
+            galleryItems.forEach(item => {
+                if (item.classList.contains(filterValue) || filterValue === "todos") {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
+                } else {
+                    item.classList.remove("show")
+                    item.classList.add("hide")
+                }
+            })
+        }
+    })
+
+    function scrollToSection(sectionId){   /* --------   FUNCION PARA SCROLL -------- */
+        document.getElementById(sectionId).scrollIntoView({behavior:"smooth"}) /* -------- Obtiene el elemento id -------- */
+    }                            /* --------   behavior: scroll suave  -------- */
+
+</script>
+</html>
